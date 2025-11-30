@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,6 +17,7 @@ const firebaseConfig = {
 // Initialize Firebase
 let app;
 let auth;
+let db;
 let googleProvider;
 let analytics;
 
@@ -27,6 +29,7 @@ try {
   // We check if app is initialized before calling getAuth to avoid "Component auth has not been registered" errors
   if (app) {
     auth = getAuth(app);
+    db = getFirestore(app);
     googleProvider = new GoogleAuthProvider();
   }
 
@@ -43,7 +46,7 @@ try {
   console.error("Critical Error Initializing Firebase:", error);
 }
 
-export { auth, googleProvider };
+export { auth, db, googleProvider };
 
 export const signInWithGoogle = async () => {
   if (!auth) {
