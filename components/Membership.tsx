@@ -33,7 +33,7 @@ const Membership: React.FC = () => {
             <span className="ml-1 text-gray-500">/year</span>
           </div>
           <ul className="space-y-4 mb-8 flex-1">
-            <li className="flex items-center text-gray-600"><Check size={18} className="text-green-500 mr-2" /> Free Delivery > ₹500</li>
+            <li className="flex items-center text-gray-600"><Check size={18} className="text-green-500 mr-2" /> Free Delivery &gt; ₹500</li>
             <li className="flex items-center text-gray-600"><Check size={18} className="text-green-500 mr-2" /> 5% Off on All Orders</li>
             <li className="flex items-center text-gray-600"><Check size={18} className="text-green-500 mr-2" /> Priority Support</li>
             <li className="flex items-center text-gray-600"><Check size={18} className="text-green-500 mr-2" /> Early Access to Sales</li>
